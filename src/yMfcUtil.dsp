@@ -54,7 +54,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 /nologo /subsystem:windows /dll /machine:I386
-# ADD LINK32 htmlhelp.lib lmSingleDWR.lib /nologo /subsystem:windows /dll /machine:I386 /out:"..\bin\yMfcUtil.dll" /libpath:"..\..\yLib\lib" /libpath:"..\..\..\yeadist\yLicMgr\lib" /libpath:"..\..\..\microsoft\sdk\HtmlHelp\lib"
+# ADD LINK32 htmlhelp.lib lmSingleDWR.lib /nologo /subsystem:windows /dll /machine:I386 /out:"..\bin\yMfcUtiNR.dll" /libpath:"..\..\yLib\lib" /libpath:"..\..\..\yeadist\yLicMgr\lib" /libpath:"..\..\..\microsoft\sdk\HtmlHelp\lib"
 
 !ELSEIF  "$(CFG)" == "yMfcUtil - Win32 Debug"
 
@@ -81,7 +81,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 /nologo /subsystem:windows /dll /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 htmlhelp.lib lmSingleDWD.lib /nologo /subsystem:windows /dll /debug /machine:I386 /out:"..\bin\yMfcUtil.dll" /pdbtype:sept /libpath:"..\..\yLib\lib" /libpath:"..\..\..\yeadist\yLicMgr\lib" /libpath:"..\..\..\microsoft\sdk\HtmlHelp\lib"
+# ADD LINK32 htmlhelp.lib lmSingleDWD.lib /nologo /subsystem:windows /dll /debug /machine:I386 /out:"..\bin\yMfcUtiND.dll" /pdbtype:sept /libpath:"..\..\yLib\lib" /libpath:"..\..\..\yeadist\yLicMgr\lib" /libpath:"..\..\..\microsoft\sdk\HtmlHelp\lib"
 
 !ENDIF 
 
@@ -120,10 +120,6 @@ SOURCE=.\StdAfx.cpp
 # Begin Source File
 
 SOURCE=.\yMfcUtil.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=.\yMfcUtil.def
 # End Source File
 # Begin Source File
 
