@@ -32,6 +32,9 @@
  * HISTORY		: =============================================================
  * 
  * $Log$
+ * Revision 1.1  2001/09/26 17:06:05  leopoldo
+ * Initial revision
+ *
  *============================================================================*/
 #include "StdAfx.h"
 
@@ -903,8 +906,8 @@ BOOL YWinApp::HtmlHelper (DWORD dwData, UINT uCommand, LPCTSTR pszParam /* = NUL
 		break;
 	}
 
-
-	HWND hWnd = ::HtmlHelp (GetMainWnd ()->m_hWnd, csHelp, uCommand, dwData);
+	// GetMainWnd ()->m_hWnd
+	HWND hWnd = ::HtmlHelp (GetDesktopWindow(), csHelp, uCommand, dwData);
 	return TRUE;
 }
 
