@@ -32,10 +32,14 @@
  * HISTORY		: =============================================================
  * 
  * $Log$
+ * Revision 1.1  2001/09/26 17:06:05  leopoldo
+ * Initial revision
+ *
  *============================================================================*/
 #include "StdAfx.h"
 
 #include <yMfcUtil.h>
+#include <yFiles.h>
 
 /*=============================================================================
  * CLASS IMPLEMENTATION
@@ -98,6 +102,37 @@ void CResourceLoader::Free ()
 	m_hData		= NULL;
 	m_pData		= NULL;
 	m_cbSize	= 0;
+}
+
+BOOL CResourceLoader::Export (LPCTSTR pszFileName, ...) const
+{
+	va_list va;
+	va_start (pszFileName, va);
+	BOOL bRet = ExportVa (pszFileName, va);
+	va_end (va);
+	return bRet;
+}
+
+BOOL CResourceLoader::ExportVa (LPCTSTR pszFileName, va_list va) const
+{
+	if ( !m_pData ) {
+		return FALSE;
+	}
+
+	YPathString		ys;
+	YFile			outFile;
+
+	ys.FormatV (pszFileName, va);
+	if ( !outFile.Open (ys, YFile::modeCreate|YFile::modeWrite) ) {
+		return FALSE;
+	}
+	if ( !outFile.Write (m_pData, m_cbSize) ) {
+		outFile.Close ();
+		ys.DeleteFiles (TRUE);
+		return FALSE;
+	}
+	outFile.Close ();
+	return TRUE;
 }
 
 //

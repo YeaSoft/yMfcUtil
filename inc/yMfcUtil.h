@@ -32,6 +32,9 @@
  * HISTORY		: =============================================================
  * 
  * $Log$
+ * Revision 1.1  2001/09/26 17:01:36  leopoldo
+ * Initial revision
+ *
  *============================================================================*/
 #ifndef __yMfcUtil_h__
 #define __yMfcUtil_h__
@@ -195,6 +198,8 @@ public:
 	BOOL						Load					(HINSTANCE hInst, UINT nID, LPCTSTR pszType);
 	BOOL						Load					(HINSTANCE hInst, LPCTSTR pszName, LPCTSTR pszType);
 	void						Free					();
+	BOOL						Export					(LPCTSTR pszFileName, ...) const;
+	BOOL						ExportVa				(LPCTSTR pszFileName, va_list va) const;
 
 // Implementation
 protected:
