@@ -32,6 +32,9 @@
  * HISTORY		: =============================================================
  * 
  * $Log$
+ * Revision 1.2  2001/11/20 13:11:44  leopoldo
+ * Changed help system window relationshhip
+ *
  * Revision 1.1  2001/09/26 17:06:05  leopoldo
  * Initial revision
  *
@@ -482,6 +485,15 @@ BOOL CLicenseError::OnInitDialog()
 	m_ctrlShowList.EnableWindow (m_pLicManager->IsActive ());
 
 	UpdateData (FALSE);
+
+	// [SCHWEINECODE:START]
+	// WORKAROUND!!!!
+	SetWindowPos (&wndTopMost, 0, 0, 0, 0, SWP_NOMOVE|SWP_NOSIZE|SWP_SHOWWINDOW);
+	SetWindowPos (&wndNoTopMost, 0, 0, 0, 0, SWP_NOMOVE|SWP_NOSIZE|SWP_SHOWWINDOW);
+	CenterWindow ();
+	SetActiveWindow ();
+	// WORKAROUND!!!!
+	// [SCHWEINECODE:END]
 	
 	return TRUE;
 }
