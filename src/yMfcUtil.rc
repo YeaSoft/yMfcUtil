@@ -1,0 +1,404 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "yUtilRes.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_LIC_DISPLAY DIALOG DISCARDABLE  0, 0, 374, 197
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Installierte Lizenzen"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,161,176,50,14
+    ICON            IDI_LICENSE,IDC_STATIC,7,7,20,20
+    LTEXT           "Dies ist eine Liste aller installierten Lizenzen.",
+                    IDC_STATIC,40,7,327,24
+    LTEXT           "Machinen-ID:",IDC_STATIC,7,34,44,8
+    EDITTEXT        IDC_LIC_MACHID,61,34,306,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "&Lizenzen:",IDC_STATIC,7,45,31,8
+    CONTROL         "List1",IDC_LIC_LST_LICENSES,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,60,360,109
+END
+
+IDD_LIC_ERROR DIALOG DISCARDABLE  0, 0, 275, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Lizenz-Fehler"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,206,120,62,14
+    ICON            IDI_STOP,IDC_STATIC,7,7,20,20
+    LTEXT           "Caption Text",IDC_LIC_ST_CAPTION,40,7,228,24
+    GROUPBOX        " Wichtige Informationen ",IDC_STATIC,7,36,261,80
+    LTEXT           "Überprüfen Sie bitte, ob eine gültige Lizenzdatei in Ihrem Installations-\nverzeichnis liegt, bzw. das Lizensieren richtig konfiguriert wurde.",
+                    IDC_STATIC,16,47,246,16
+    LTEXT           "Fehler-Text:",IDC_STATIC,16,92,38,8
+    LTEXT           "Error Text",IDC_LIC_ST_ERROR,65,92,194,8
+    LTEXT           "Machinen-ID:",IDC_STATIC,16,103,44,8
+    EDITTEXT        IDC_LIC_MACHID,65,103,194,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "&Lizenzen ",IDC_LIC_BTN_SHOWLIC,127,120,62,14
+    LTEXT           "Halten Sie bitte Ihre Maschinen-ID (s.u.) bereit, falls Sie Hilfe oder weitere Lizenzen vom Support benötigen.",
+                    IDC_STATIC,16,71,246,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_LIC_DISPLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 367
+        VERTGUIDE, 40
+        VERTGUIDE, 61
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_LIC_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        VERTGUIDE, 40
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUT_PHYSMEM       "%lu KB"
+    IDS_ABOUT_PHYSFREE      "%lu KB"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUT_DISKSPACE     "%lu KB frei auf %c:"
+    IDS_ABOUT_DISK_UNAVAIL  "nicht verfügbar"
+    IDS_COL_LICNAME         "Lizenz"
+    IDS_COL_LICCOUNT        "Anzahl"
+    IDS_COL_LICUSE          "Benutzt"
+    IDS_COL_LICEXPIRE       "Gültigkeit"
+    IDS_COL_LICCOMP         "Beschränkungen"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LMERR_NOERROR       "Kein Fehler."
+    IDS_LMERR_FILENOTFOUND  "Datei nicht gefunden."
+    IDS_LMERR_NOT_ENOUGH_MEMORY "Fehler bei Speicheralloziierung."
+    IDS_LMERR_WRITEFAULT    "Fehler beim Dateischreiben."
+    IDS_LMERR_READFAULT     "Fehler beim Dateilesen."
+    IDS_LMERR_CANNOT_MAKE   "Datei kann nicht erstellt werden."
+    IDS_LMERR_SCHEME_INVALID "Das Lizenzschema ist ungültig."
+    IDS_LMERR_SCHEME_TAMPERED "Lizenzschema ist manipuliert worden."
+    IDS_LMERR_SCHEME_NOTLOADED "Fehler beim Laden des Lizenzschemas."
+    IDS_LMERR_SERVER_NOTINITED "Das Lizenzsystem ist nicht initialisiert."
+    IDS_LMERR_SERVER_INITED "Das Lizenzsystem ist bereits initialisiert."
+    IDS_LMERR_SERVER_INVALIDADDR "Ungültige Adresse des Lizenzmanagers"
+    IDS_LMERR_SERVER_UNSUPPORTEDADDR 
+                            "Nicht unterstützter Lizenzmanager-Adresstyp."
+    IDS_LMERR_SERVER_CONNECTION "Verbindungsfehler zum Lizenzmanager."
+    IDS_LMERR_SERVER_NOTFOUND "Kein Lizenzschema gefunden."
+    IDS_LMERR_SERVER_MACHINEID "Die Maschinen-ID kann nicht bestimmt werden."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LMERR_SERVER_UNKNOWNPRODUCT "Unbekanntes Produkt angefordert."
+    IDS_LMERR_SERVER_UNKNOWNFEATURE "Unbekanntes Feature angefordert."
+    IDS_LMERR_SERVER_LICNOTFOUND "Keine passende Lizenz gefunden."
+    IDS_LMERR_SERVER_NOMORELICENSES 
+                            "Keine weiteren Lizenzen für das angeforderte Feature vorhanden."
+    IDS_LMERR_SERVER_LICEXPIRED "Die Lizenz ist abgelaufen."
+    IDS_LMERR_LICENSE_BADMID 
+                            "Die Maschinen-ID paßt nicht zum Lizenzschlüssel."
+    IDS_LMERR_LICENSE_BADKEY "Der Lizenzschlüssel ist mißgebildet."
+    IDS_LMERR_LICENSE_INVALID "Die angegebene Lizenz ist ungültig."
+    IDS_LMERR_UNKNOWN       "Unbekannter Fehler."
+END
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "icUtilRes.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\yMfcUtil.rc2"" // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_YEASOFT             ICON    DISCARDABLE     "res\\YeaSoft.ico"
+IDI_LICENSE             ICON    DISCARDABLE     "res\\License.ico"
+IDI_STOP                ICON    DISCARDABLE     "res\\Stop.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 250, 126
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About %s..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,195,99,45,14
+    ICON            IDI_YEASOFT,IDC_ABOUT_ICON,10,7,20,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,38,84,202,1
+    LTEXT           "Available Memory:",IDC_STATIC,38,90,70,8
+    LTEXT           "Free Memory:",IDC_STATIC,38,98,70,8
+    LTEXT           "Disk Space:",IDC_STATIC,38,106,70,8
+    LTEXT           "Physical Mem",IDC_ABOUT_PHYSICAL_MEM,108,90,75,8
+    LTEXT           "Physical Free",IDC_ABOUT_PHYSICAL_FREE,108,98,75,8
+    LTEXT           "Disk Space",IDC_ABOUT_DISK_SPACE,108,106,75,8
+    LTEXT           "REGISTERED TO",IDC_STATIC,38,49,60,8
+    LTEXT           "(username)",IDC_ABOUT_APP_OWNER,38,58,202,8
+    LTEXT           "(company)",IDC_ABOUT_APP_COMPANY,38,67,202,8
+    LTEXT           "<title>",IDC_ABOUT_TITLE,38,7,202,32
+END
+
+IDD_LIC_DISPLAY DIALOG DISCARDABLE  0, 0, 374, 197
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Installed Licences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,161,176,50,14
+    ICON            IDI_LICENSE,IDC_STATIC,7,7,20,20
+    LTEXT           "This is a list of all installed licences.",IDC_STATIC,
+                    40,7,327,24
+    LTEXT           "Machine ID:",IDC_STATIC,7,34,40,8
+    EDITTEXT        IDC_LIC_MACHID,61,34,306,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "&Licences:",IDC_STATIC,7,45,32,8
+    CONTROL         "List1",IDC_LIC_LST_LICENSES,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_OWNERDRAWFIXED | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,60,360,109
+END
+
+IDD_LIC_ERROR DIALOG DISCARDABLE  0, 0, 265, 133
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Licence Error"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,196,112,62,14
+    ICON            IDI_STOP,IDC_STATIC,7,7,20,20
+    LTEXT           "Caption Text",IDC_LIC_ST_CAPTION,40,7,218,24
+    GROUPBOX        " Important Information ",IDC_STATIC,7,36,251,72
+    LTEXT           "Please check that you have a valid licence file in your installation directory or that licencing is configured correctly.\nIf you need to contact support in order to get help or additional licences, please hold your machine ID (shown below) ready.",
+                    IDC_STATIC,16,47,236,32
+    LTEXT           "Error Text:",IDC_STATIC,16,84,34,8
+    LTEXT           "Error Text",IDC_LIC_ST_ERROR,65,84,184,8
+    LTEXT           "Machine ID:",IDC_STATIC,16,95,40,8
+    EDITTEXT        IDC_LIC_MACHID,65,95,184,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    PUSHBUTTON      "Show &Licences",IDC_LIC_BTN_SHOWLIC,127,112,62,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 240
+        VERTGUIDE, 38
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+    END
+
+    IDD_LIC_DISPLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 367
+        VERTGUIDE, 40
+        VERTGUIDE, 61
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_LIC_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        VERTGUIDE, 40
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUT_PHYSMEM       "%lu KB"
+    IDS_ABOUT_PHYSFREE      "%lu KB"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUT_DISKSPACE     "%lu KB Free on %c:"
+    IDS_ABOUT_DISK_UNAVAIL  "Unavailable"
+    IDS_COL_LICNAME         "Feature"
+    IDS_COL_LICCOUNT        "Count"
+    IDS_COL_LICUSE          "Used"
+    IDS_COL_LICEXPIRE       "Expiration"
+    IDS_COL_LICCOMP         "Restrictions"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LMERR_NOERROR       "No error."
+    IDS_LMERR_FILENOTFOUND  "File not found."
+    IDS_LMERR_NOT_ENOUGH_MEMORY "Error allocating memory."
+    IDS_LMERR_WRITEFAULT    "Error writing file."
+    IDS_LMERR_READFAULT     "Error reading file."
+    IDS_LMERR_CANNOT_MAKE   "Cannot create the file."
+    IDS_LMERR_SCHEME_INVALID "Licensing scheme is not valid."
+    IDS_LMERR_SCHEME_TAMPERED "Licensing scheme has been tampered."
+    IDS_LMERR_SCHEME_NOTLOADED "Error loading licensing scheme."
+    IDS_LMERR_SERVER_NOTINITED "Licensing system not initialized."
+    IDS_LMERR_SERVER_INITED "Licensing system already initialized."
+    IDS_LMERR_SERVER_INVALIDADDR "Invalid licence manager address."
+    IDS_LMERR_SERVER_UNSUPPORTEDADDR 
+                            "Unsupported licence manager address type."
+    IDS_LMERR_SERVER_CONNECTION "Connection error to licence manager."
+    IDS_LMERR_SERVER_NOTFOUND "No licensing scheme found."
+    IDS_LMERR_SERVER_MACHINEID "Cannot determine machine ID."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LMERR_SERVER_UNKNOWNPRODUCT "Unknown product requested."
+    IDS_LMERR_SERVER_UNKNOWNFEATURE "Unknown feature requested."
+    IDS_LMERR_SERVER_LICNOTFOUND "No suitable licence found."
+    IDS_LMERR_SERVER_NOMORELICENSES 
+                            "No more licences for the requested feature."
+    IDS_LMERR_SERVER_LICEXPIRED "Licence is expired."
+    IDS_LMERR_LICENSE_BADMID "The machine ID does not match the licence key."
+    IDS_LMERR_LICENSE_BADKEY "The licence key is malformed."
+    IDS_LMERR_LICENSE_INVALID "The specified licence is invalid."
+    IDS_LMERR_UNKNOWN       "Unknown Error."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\yMfcUtil.rc2" // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

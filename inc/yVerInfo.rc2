@@ -1,0 +1,119 @@
+/*=============================================================================
+ * This is a part of the YeaSoft Software Development Kit.
+ * Copyright (C) 2001 YEAsoft Int'l.
+ * All rights reserved.
+ *=============================================================================
+ * Copyright (c) 2001 YEAsoft Int'l (Leo Moll, Andrea Pennelli).
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software.
+ *
+ * Permission is granted to anyone to use this software for any purpose,
+ * including commercial applications, and to alter it and redistribute it
+ * freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not
+ *    claim that you wrote the original software. If you use this software in
+ *    a product, an acknowledgment in the product documentation would be
+ *    appreciated but is not required.
+ *
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ *    misrepresented as being the original software.
+ * 
+ * 3. This notice may not be removed or altered from any source distribution.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *=============================================================================
+ * FILENAME		:	yMfcUtil.rc2
+ * PURPOSE		:	This is a standard resource include for the version info
+ *					resource
+ * SCOPE		:	YeaSoft MFC GUI Library
+ * HISTORY		: =============================================================
+ * 
+ * $Log$
+ *============================================================================*/
+
+/* version info */
+VS_VERSION_INFO	VERSIONINFO
+FILEVERSION		VER_FILEVERSION
+PRODUCTVERSION	VER_PRODUCTVERSION
+FILEFLAGSMASK	VER_FILEFLAGSMASK
+FILEFLAGS		VER_FILEFLAGS
+FILEOS			VER_FILEOS
+FILETYPE		VER_FILETYPE
+FILESUBTYPE		VER_FILESUBTYPE
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK VER_LS_ENGLISH
+		BEGIN 
+			VALUE "CompanyName",     VER_COMPANYNAME_STR		"\0"
+			VALUE "FileDescription", VER_FILEDESCRIPTION_STR	"\0"
+			VALUE "FileVersion",     VER_FILEVERSION_STR		"\0"
+			VALUE "InternalName",    VER_INTERNALNAME_STR		"\0"
+			VALUE "LegalCopyright",  VER_LEGALCOPYRIGHT_STR		"\0"
+			VALUE "LegalTrademarks", VER_LEGALTRADEMARKS_STR	"\0"
+			VALUE "OriginalFilename",VER_ORIGINALFILENAME_STR	"\0"
+			VALUE "ProductName",     VER_PRODUCTNAME_STR		"\0"
+			VALUE "ProductVersion",  VER_PRODUCTVERSION_STR		"\0"
+		END
+#ifdef VER_HAS_ITALIAN
+		BLOCK VER_LS_ITALIAN
+		BEGIN 
+			VALUE "CompanyName",     VER_COMPANYNAME_STR		"\0"
+			VALUE "FileDescription", VER_FILEDESCRIPTION_STR	"\0"
+			VALUE "FileVersion",     VER_FILEVERSION_STR		"\0"
+			VALUE "InternalName",    VER_INTERNALNAME_STR		"\0"
+			VALUE "LegalCopyright",  VER_LEGALCOPYRIGHT_STR		"\0"
+			VALUE "LegalTrademarks", VER_LEGALTRADEMARKS_STR	"\0"
+			VALUE "OriginalFilename",VER_ORIGINALFILENAME_STR	"\0"
+			VALUE "ProductName",     VER_PRODUCTNAME_STR		"\0"
+			VALUE "ProductVersion",  VER_PRODUCTVERSION_STR		"\0"
+		END
+#endif
+#ifdef VER_HAS_GERMAN
+		BLOCK VER_LS_GERMAN
+		BEGIN 
+			VALUE "CompanyName",     VER_COMPANYNAME_STR		"\0"
+			VALUE "FileDescription", VER_FILEDESCRIPTION_STR	"\0"
+			VALUE "FileVersion",     VER_FILEVERSION_STR		"\0"
+			VALUE "InternalName",    VER_INTERNALNAME_STR		"\0"
+			VALUE "LegalCopyright",  VER_LEGALCOPYRIGHT_STR		"\0"
+			VALUE "LegalTrademarks", VER_LEGALTRADEMARKS_STR	"\0"
+			VALUE "OriginalFilename",VER_ORIGINALFILENAME_STR	"\0"
+			VALUE "ProductName",     VER_PRODUCTNAME_STR		"\0"
+			VALUE "ProductVersion",  VER_PRODUCTVERSION_STR		"\0"
+		END
+#endif
+	END
+ 
+	BLOCK "VarFileInfo" 
+	BEGIN 
+	/* The following line should only be modified for localized versions.     */
+	/* It consists of any number of WORD,WORD pairs, with each pair           */
+	/* describing a language,codepage combination supported by the file.      */
+	/*                                                                        */
+	/* For example, a file might have values "0x409,1252" indicating that it  */
+	/* supports German language (0x407) in the Windows ANSI codepage (1252).  */
+ 
+	VALUE "Translation",
+		VER_LC_ENGLISH, VER_CP_UNICODE,
+#ifdef VER_HAS_ITALIAN
+		VER_LC_ITALIAN, VER_CP_UNICODE,
+#endif
+#ifdef VER_HAS_GERMAN
+		VER_LC_GERMAN, VER_CP_UNICODE,
+#endif
+	END
+END
+
+//	VALUE "Comments", "\0"
+//	VALUE "PrivateBuild", "\0"
+//	VALUE "SpecialBuild", "\0"
+
+//
+// EoF
+////////
+
